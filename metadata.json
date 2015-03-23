@@ -1,12 +1,13 @@
 {
   "name": "redbeebv-vrrp",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Dany Henriquez",
   "summary": "Configure VRRP with keepalived",
   "license": "MIT",
   "source": "https://github.com/RedbeeBV/vrrp",
   "project_page": "https://github.com/RedbeeBV/vrrp",
   "issues_url": "https://github.com/RedbeeBV/vrrp/issues",
+  "tags": ["keepalived", "vrrp"],
   "operatingsystem_support": [
     {
     "operatingsystem":"RedHat",
