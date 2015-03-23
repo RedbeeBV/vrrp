@@ -40,7 +40,7 @@ class{ 'vrrp':
   ]
   service_ensure = 'running'
   service_enable = true,
-  notify => undef,
+  notify_main => undef,
   notify_master => undef,
   notify_backup => undef,
   notify_fault => undef,
