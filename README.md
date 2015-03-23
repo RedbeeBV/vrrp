@@ -9,6 +9,8 @@
 
 ## Overview
 
+[![Build Status](https://travis-ci.org/RedbeeBV/vrrp.svg?branch=master)](https://travis-ci.org/RedbeeBV/vrrp)
+
 This module will only configure simple VRRP instances.
 Note : The check scripts need to be copied bij yourself or already need to exist.
 
