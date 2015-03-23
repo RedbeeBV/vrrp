@@ -22,7 +22,7 @@ class vrrp (
   $auth_pass = '1234567890',
   $virtual_ip = '',
   $vrrp_scripts = [],
-  $notify = undef,
+  $notify_main = undef,
   $notify_master = undef,
   $notify_backup = undef,
   $notify_fault = undef,
