@@ -1,0 +1,35 @@
+<% vrrp_scripts.each do |script| %>
+vrrp_script <%= script['name'] %> {
+  script "<%= script['script'] %>"
+  interval <%= script['interval'] %>
+  fall <%= script['fall'] %>
+  rise <%= script['rise']%>
+  weight <%= script['weight'] %>
+}
+<% end %>
+vrrp_instance <%= vrrp_instance %> {
+        state <%= state %>
+        interface <%= interface %>
+        virtual_router_id <%= virtual_router_id %>
+        priority <%= priority %>
+        advert_int <%= advert_int %>
+        authentication {
+        auth_type PASS
+        auth_pass <%= auth_pass %>
+        }
+        virtual_ipaddress {
+                 <%= virtual_ip %>
+        }
+        <% unless vrrp_scripts.empty? %>
+        track_script {
+                <% vrrp_scripts.each do |script| %>
+                <%= script['name'] %>
+                <% end %>
+        }
+        <% end %>
+        <% if notify then %><%= notify %><% end %>
+        <% if notify_stop then %><%= notify_stop %><% end %>
+        <% if notify_master then %><%= notify_master %><% end %>
+        <% if notify_backup then %><%= notify_backup %><% end %>
+        <% if notify_fault then %><%= notify_fault %><% end %>
+}
