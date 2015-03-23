@@ -1,6 +1,6 @@
 {
   "name": "redbeebv-vrrp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Dany Henriquez",
   "summary": "Configure VRRP with keepalived",
   "license": "MIT",
