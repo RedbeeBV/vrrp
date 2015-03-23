@@ -41,13 +41,12 @@ class{ 'vrrp':
   service_ensure = 'running'
   service_enable = true,
   notify_main => undef,
-  notify_master => undef,
-  notify_backup => undef,
-  notify_fault => undef,
-  notify_stop => undef,
+  notify_master = undef,
+  notify_backup = undef,
+  notify_fault = undef,
+  notify_stop = undef,
 }
 ```
 ## Limitations
 
 This module will only work on servers/systems with systemd.
-
