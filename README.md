@@ -40,11 +40,12 @@ class{ 'vrrp':
   ]
   service_ensure = 'running'
   service_enable = true,
-  notify_main => undef,
-  notify_master = undef,
-  notify_backup = undef,
-  notify_fault = undef,
-  notify_stop = undef,
+  # Provide paths to executable if you want to use notify.
+  notify_main => false,
+  notify_master = false,
+  notify_backup = false,
+  notify_fault = false,
+  notify_stop = false,
 }
 ```
 ## Limitations
