@@ -40,8 +40,8 @@ class vrrp (
   }
 
   service { 'keepalived':
-    ensure     => ensure,
-    enable     => enable,
+    ensure     => $ensure,
+    enable     => $enable,
     hasrestart => true,
     hasstatus  => true,
   }
